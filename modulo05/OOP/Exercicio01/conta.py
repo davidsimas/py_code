@@ -1,9 +1,9 @@
 class Conta:
-    # Atributos recebendo tipos
-    titular = ''
+
+    titular = ""
     numero = 0
     saldo = 0
     limite = 0
-    # Método de acesso aos atributos da classe
-    def __str__(self): # Conta
+
+    def __str__(self):
         return f' {self.titular} - {self.numero} - {self.saldo} - {self.limite}'

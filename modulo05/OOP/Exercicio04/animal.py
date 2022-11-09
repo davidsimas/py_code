@@ -1,7 +1,7 @@
 class Animal:
-    raca = ""
+    especie = ""
     cor = ""
-    idade = ""
+    raca = ""
 
     def __str__(self):
-        return f"{self.raca} - {self.cor} - {self.idade}"
+        return f"{self.especie} - {self.cor} - {self.raca}"

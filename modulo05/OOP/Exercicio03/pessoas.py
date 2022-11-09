@@ -1,9 +1,8 @@
 class Pessoas:
 
     nome = ""
-    sobrenome = ""
+    cpf = ""
     idade = 0
-    data_nascimento = ""
 
     def __str__(self):
-        return f"{self.nome} - {self.sobrenome} - {self.idade} - {self.data_nascimento}"
+        return f"{self.nome} - {self.cpf} - {self.idade}"
