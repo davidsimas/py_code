@@ -1,5 +1,6 @@
 class Conta:
 
+    # Método construtor
     def __init__(self, titular, numero, saldo, limite):
         self.__titular = titular
         self.__numero = numero
@@ -7,32 +8,28 @@ class Conta:
         self.__limite = limite
 
 
-    # Setter
-    def difinir_titular(self, titular):
+    # Setter e Getter
+    def set_titular(self, titular):
         self.__titular = titular
-    # Getter
-    def pegar_titular(self, titular):
+    def get_titular(self):
         return self.__titular
 
-    def difinir_numero(self, numero):
+    def set_numero(self, numero):
         self.__numero = numero
-    # Getter
-    def pegar_numero(self, numero):
+    def get_numero(self):
         return self.__numero
 
-    def difinir_saldo(self, saldo):
+    def set_saldo(self, saldo):
         self.__saldo = saldo
-    # Getter
-    def pegar_saldo(self, saldo):
+    def get_saldo(self):
         return self.__saldo
 
-    def difinir_limite(self, limite):
+    def set_limite(self, limite):
         self.__limite = limite
-    # Getter
-    def pegar_limite(self, limite):
+    def get_limite(self):
         return self.__limite
 
 
+    # Método ToString
     def __str__(self):
-        return f"{self.pegar_titular()} - {self.__numero() - {self.pegar_saldo()} - {self.pegar_limite()}}"
-        
+        return f"{self.get_titular()} - {self.get_numero()} - R$ {self.get_saldo():.2f} - R$ {self.get_limite():.2f}"
