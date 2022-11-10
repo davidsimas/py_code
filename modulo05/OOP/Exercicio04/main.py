@@ -19,9 +19,9 @@ print(animal)
 
 anima2 = Animal()
 
-anima2.especie = "Canis Lupus Familiaris"
+anima2.especie = "Felis Silvestris Catus"
 anima2.cor = "Preta"
-anima2.raca = "Schnauzer"
+anima2.raca = "Siamês"
 
 print(anima2)
 
