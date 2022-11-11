@@ -10,6 +10,7 @@ def imprime_dados(animal):
     Cor: {animal.get_cor()}.
     """)
 
+
 print("-" * 60)
 animal1 = Animal(input("Informe a espécie: "),
                 (input("Informe a raça: ")),
