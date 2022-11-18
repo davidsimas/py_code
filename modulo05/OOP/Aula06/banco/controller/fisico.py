@@ -48,7 +48,7 @@ def read_psf():
 
     for conta in contas:
         conta = conta.strip()
-        conta_objeto = conta.split("; ")
+        conta_objeto = conta.split(";")
 
         conta = PessoaFisica()
         # agencia, numero_agencia, titular, cpf e saldo_incial

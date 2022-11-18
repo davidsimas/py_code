@@ -79,11 +79,13 @@ def menu():
                         informe = input("\nDeseja informar Segundo Titular? [ S ] / [ N ]: ").upper()
                         if informe == "S":
                             pessea_juridica.segundo_titular = input("Informe o Segundo Titular: ")
-                        create_pj(pessea_fisica)
+
+                        create_pj(pessea_juridica)
 
                     case 2:
                         # Listar Pessoa Fisica
                         print("\n Discritivo da conta Pessoa Juridica\n")
+                        
                         lista_pj = read_pj()
 
                         for c in lista_pj:

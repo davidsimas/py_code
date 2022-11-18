@@ -2,7 +2,7 @@ from model.pessoaJuridica import PessoaJuridica
 
 def create_pj(conta):
 
-    contas = open("pessoaJuridico.txt", "a")
+    contas = open("pessoaJuridica.txt", "a")
     contas.write(str(conta) + "\n")
 
     contas.close()
@@ -12,11 +12,11 @@ def read_pj():
 
     lista_conta = []
 
-    contas = open("pessoaJuridico.txt", "r")
+    contas = open("pessoaJuridica.txt", "r")
 
     for conta in contas:
         conta = conta.strip()
-        conta_objeto = conta.split("; ")
+        conta_objeto = conta.split(";")
 
         conta = PessoaJuridica()
         # agencia, numero_agencia, titular, cpf e saldo_incial
