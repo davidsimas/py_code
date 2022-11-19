@@ -1,2 +1,0 @@
-Blumenau; 101; Felipe; 1110; 25000.0;  
-Blumenau; 101; Felipe; 0001; 25000.0;  
