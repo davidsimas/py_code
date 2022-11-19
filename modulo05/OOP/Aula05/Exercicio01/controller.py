@@ -42,7 +42,7 @@ def update(conta_update:Conta):
         conta_objeto = conta_limpa.split(";")
 
         if conta_update.numero == int(conta_objeto[1]):
-            lista_contas.append(conta)
+            lista_contas.append(str(conta_update) + "\n")
         else:
             lista_contas.append(conta)
 
@@ -65,17 +65,13 @@ def delete(numero_conta):
         conta_objeto = conta_limpa.split(";")
 
         if numero_conta != int(conta_objeto[1]):
-            print(f"Aqui numero_conta {numero_conta}")
-            print(f"Aqui conta_objeto 1 {int(conta_objeto[1])}")
-            lista_contas.append(conta)
-        else:
             lista_contas.append(conta)
 
     contas.close()
 
-    conta = open("conta.txt", "w")
-    conta.writelines(lista_contas)
-    conta.close()
+    contas = open("conta.txt", "w")
+    contas.writelines(lista_contas)
+    contas.close()
 
 """
 David;1111;10000

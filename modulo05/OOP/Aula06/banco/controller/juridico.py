@@ -19,7 +19,7 @@ def read_pj():
         conta_objeto = conta.split(";")
 
         conta = PessoaJuridica()
-        # agencia, numero_agencia, titular, cpf e saldo_incial
+
         conta.agencia = conta_objeto[0]
         conta.numero_agencia = conta_objeto[1]
         conta.titular = conta_objeto[2]
@@ -32,3 +32,45 @@ def read_pj():
     contas.close()
 
     return lista_conta
+
+
+def update_pj(conta_update:PessoaJuridica):
+
+    lista_contas = []
+
+    contas = open("pessoaJuridica.txt", "r")
+
+    for conta in contas:
+
+        conta_objeto = conta.strip().split(";")
+
+        if conta_update.cnpj == int(conta_objeto[3]):
+            lista_contas.append(str(conta_update) + "\n")
+        else:
+            lista_contas.append(conta)
+
+    contas.close()
+
+    contas = open("pessoaJuridica.txt", "w")
+    contas.writelines(lista_contas)
+    contas.close()
+
+
+def delete_pj(numero_cnpj):
+
+    lista_contas = []
+
+    contas = open("pessoaJuridica.txt", "r")
+
+    for conta in contas:
+
+        conta_objeto = conta.strip().split(";")
+
+        if numero_cnpj != int(conta_objeto[3]):
+            lista_contas.append(conta)
+
+    contas.close()
+
+    contas = open("pessoaJuridica.txt", "w")
+    contas.writelines(lista_contas)
+    contas.close()

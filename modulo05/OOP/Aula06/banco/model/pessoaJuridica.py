@@ -1,19 +1,3 @@
-"""
- - Na pasta model crie um terceiro documento com namespace pessoaJuridica.py.
- - Realize a importação da classe conta from model.conta import Conta.
- - Dentro deste documento crie uma classe PessoaJuridica, faça a herança da classe
-   conta esta classe deve conter quatro atributos privados:
-     * segundo_titular
-     * titular
-     * cnpj
-     * saldo_inicial
-   inseridos diretamente na classe, todos os atributos devem estar vazios, sem dados fixos.
- - Crie anotações de @property e @setter para cada atributo privado da nossa classe.
- - Chame o método __str__ e retorne o método super().__str__() e acessando os atributos
-   através das anotações de @property e @setter de titular, cnpj e saldo_inicial e
-   segundo_titular,  coloque ( ; ) na divisão entre  os atributos.
-"""
-
 from model.conta import Conta
 
 class PessoaJuridica(Conta):
