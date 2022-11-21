@@ -1,2 +1,1 @@
 Blumenau; 101; David Simas; 001001; 28000.0; Ana
-Blumenau; 101; Marcelo da Silva Saurro; 2002; 78912.0; Joana da Silva Saurro

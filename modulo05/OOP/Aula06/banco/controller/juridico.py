@@ -56,7 +56,7 @@ def update_pj(conta_update:PessoaJuridica):
     contas.close()
 
 
-def delete_pj(numero_cnpj):
+def delete_pj(conta_delete:PessoaJuridica):
 
     lista_contas = []
 
@@ -66,7 +66,7 @@ def delete_pj(numero_cnpj):
 
         conta_objeto = conta.strip().split(";")
 
-        if numero_cnpj != int(conta_objeto[3]):
+        if conta_delete.cnpj != int(conta_objeto[3]):
             lista_contas.append(conta)
 
     contas.close()

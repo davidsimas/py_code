@@ -1,12 +1,16 @@
+# Importação da Classe mãe
 from model.conta import Conta
 
+# Classe filhas
 class PessoaFisica(Conta):
 
+    # Atributos com modificadores de acesso privado
     __segundo_titular = ""
     __titular = ""
     __cpf = ""
     __saldo_inicial = 0.0
 
+    # Metodos Getters e Setters
     @property
     def segundo_titular(self):
         return self.__segundo_titular
@@ -39,5 +43,6 @@ class PessoaFisica(Conta):
         self.__saldo_inicial = saldo_inicial
 
     
+    # Metodo ToString
     def __str__(self):
         return f"{super().__str__()}; {self.titular}; {self.cpf}; {self.saldo_inicial}; {self.segundo_titular}"
