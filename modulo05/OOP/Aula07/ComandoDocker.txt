@@ -1,0 +1,7 @@
+- Listar os Container
+    docker ps
+
+- Lista os Contaienr e Contaienr Executando
+    docket ps -a
+- 
+    docker rum --name postgres-teste -e POSTGRES
