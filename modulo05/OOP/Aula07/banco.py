@@ -14,7 +14,7 @@ if conn is not None:
 cursor = conn.cursor()
 
 # Comando SQL - DDL para criar Tabela.
-#cursor.execute("CREATE TABLE david (nome VARCHAR(30), sobrenome VARCHAR(30))")
+#cursor.execute("CREATE TABLE david (id int primary key generated always as identity, nome VARCHAR(30), sobrenome VARCHAR(30))")
 
 # Comando SQL - DML para inserir dados na Tabela
 #nome = input("Digite seu nome: ")
@@ -26,14 +26,36 @@ cursor.execute("SELECT * FROM david")
 rs = cursor.fetchall()
 
 for row in rs:
-    print("Nome = ", row[0])
-    print("Sobrenome  = ", row[1], "\n")
+    print("ID = ", row [0])
+    print("Nome = ", row[1])
+    print("Sobrenome  = ", row[2], "\n")
 
+# Comando SQL - DML para update dados na Tabela
+#idd = int(input("Digite o ID: "))
+#nome = input("Digite novo nome: ")
+#sobrenome = input("Digite novo sobrenome: ")
 
+#cursor.execute("UPDATE david SET nome = %s, sobrenome = %s WHERE id = %s", (nome, sobrenome, idd))
 
+# Comando SQL - DML para Excluir dados na Tabela
 
+idd = (input("Digite o ID: "))
 
+cursor.execute("DELETE FROM david WHERE id = %s", idd)
+
+count = cursor.rowcount
+print(count, "Dados deletado com sucesso")
 
 conn.commit()
 cursor.close()
 conn.close()
+
+
+"""
+https://pynative.com/python-postgresql-insert-update-delete-table-data-to-perform-crud-operations/
+
+
+
+http://www.dsc.ufcg.edu.br/~jacques/cursos/map/
+html/uml/diagramas/diagramas.htm
+"""
